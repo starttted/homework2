@@ -1,40 +1,70 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>社团报名</title>
-</head>
-<body>
-    <header>
-        <h1>原审志愿者协会 · 招新报名</h1>
-        <p>聚微光，成炬火 — 欢迎热心公益的你加入！</p>
-    </header>
+<form action="#" method="get">
+    <p>
+        <label for="name">姓名（可填昵称）</label>
+        <input type="text" id="name" name="name" placeholder="怎么称呼你" required maxlength="20" pattern="[\u4e00-\u9fa5a-zA-Z]+">
+    </p>
 
-    <nav>
-        <a href="#intro">社团介绍</a>
-        <a href="#form">报名表</a>
-    </nav>
+    <p>
+        <label for="mail">邮箱</label>
+        <input type="email" id="mail" name="mail" required>
+    </p>
 
-    <main>
-        <section id="intro">
-            <h2>关于我们</h2>
-            <p>原审志愿者协会成立于 2015 年，长期开展社区服务、环保公益、支教助学等活动。</p>
-            <ul>
-                <li>招新对象：全校在读学生</li>
-                <li>报名时间：2026.9.5 – 2026.9.30</li>
-                <li>面试通知：提交后 3 个工作日内短信通知</li>
-            </ul>
-        </section>
+    <p>性别</p>
+    <p>
+        <label><input type="radio" name="gender" value="男" required> 男</label>
+        <label><input type="radio" name="gender" value="女"> 女</label>
+        <label><input type="radio" name="gender" value="其他"> 其他</label>
+    </p>
 
-        <section id="form">
-            <h2>填写报名表</h2>
-            <p>（表单下一步填在这里）</p>
-        </section>
-    </main>
+    <p>
+        <label for="birth">出生日期</label>
+        <input type="date" id="birth" name="birth" required>
+    </p>
 
-    <footer>
-        <p>原审志愿者协会 · 大学城校区学生活动中心</p>
-    </footer>
-</body>
-</html>
+    <p>
+        <label for="age">年龄</label>
+        <input type="number" id="age" name="age" placeholder="16～30" required min="16" max="30">
+    </p>
+
+    <p>
+        <label for="college">所在学院</label>
+        <select id="college" name="college" required>
+            <option value="">— 请选择 —</option>
+            <option value="文学院">文学院</option>
+            <option value="理学院">理学院</option>
+            <option value="工学院">工学院</option>
+            <option value="医学院">医学院</option>
+            <option value="法学院">法学院</option>
+            <option value="经济学院">经济学院</option>
+            <option value="艺术学院">艺术学院</option>
+            <option value="其他">其他</option>
+        </select>
+    </p>
+
+    <p>想深入了解的兴趣方向（可多选）</p>
+    <p>
+        <label><input type="checkbox" name="hobby" value="社区服务"> 社区服务</label>
+        <label><input type="checkbox" name="hobby" value="环保公益"> 环保公益</label>
+        <label><input type="checkbox" name="hobby" value="支教助学"> 支教助学</label>
+        <label><input type="checkbox" name="hobby" value="活动策划"> 活动策划</label>
+    </p>
+
+    <p>
+        <label for="bio">个人简介 / 志愿经历</label><br>
+        <textarea id="bio" name="bio" rows="4" maxlength="200" placeholder="简单说说你的特长或志愿经历"></textarea>
+    </p>
+
+    <p>
+        <label for="resume">上传简历或作品（选填）</label>
+        <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx,.jpg,.png">
+    </p>
+
+    <p>
+        <label><input type="checkbox" name="agree" required> 我已阅读并同意报名须知，信息真实有效</label>
+    </p>
+
+    <p>
+        <button type="submit">提交报名</button>
+        <button type="reset">重置</button>
+    </p>
+</form>
